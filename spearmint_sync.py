@@ -298,7 +298,7 @@ def attempt_dispatch(expt_name, expt_dir, work_dir, chooser, options):
     # Verify that pending jobs are actually running.
     for job_id in pending:
         sgeid = expt_grid.get_sgeid(job_id)
-        if not sgeid in psutil.get_pid_list():
+        if not sgeid in psutil.pids():
             # Job is no longer running but still in the candidate list. Assume it crashed out.
             expt_grid.set_candidate(job_id)
 
