@@ -26,7 +26,7 @@ import numpy as np
 import scipy.linalg as spla
 import scipy.optimize as spo
 import scipy.io as sio
-import scipy.weave
+import weave
 try:
     import matplotlib.pyplot as plt
 except:
